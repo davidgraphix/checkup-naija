@@ -1,12 +1,10 @@
-import Hero from '@/components/Hero/Hero'
-import Navbar from '@/components/Navbar/Navbar'
+import Hero from '@/components/Home/Hero'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
       <Hero />
-      
     </div>
   )
 }
