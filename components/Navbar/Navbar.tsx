@@ -1,21 +1,39 @@
-import React from 'react'
+"use client"; // needed if you're using Next.js App Router (13+)
+
+import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const Navbar = () => {
+  const pathname = usePathname(); // get current route
+
+  const links = [
+    { href: "/", label: "HOME" },
+    { href: "/about", label: "ABOUT" },
+    { href: "/services", label: "SERVICES" },
+  ];
+
   return (
-    <div>
-      
-       <header className="w-full flex justify-center pt-6">
+    <header className="w-full flex justify-center pt-6">
       <div className="bg-white shadow-md rounded-full px-8 py-3 flex items-center justify-between w-[90%] max-w-6xl">
-        
         <div className="flex items-center space-x-2">
-         
           <span className="text-gray-800 font-semibold text-lg">CheckupNaija</span>
         </div>
 
         <nav className="flex space-x-8 font-medium text-black">
-          <Link href="/home">HOME</Link>
-          <Link href="/about">ABOUT</Link>
-          <Link href="/services">SERVICES</Link>
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`relative pb-1 ${
+                pathname === href
+                  ? "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-green-800"
+                  : ""
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
 
         <div className="flex items-center space-x-3">
@@ -34,10 +52,7 @@ const Navbar = () => {
         </div>
       </div>
     </header>
+  );
+};
 
-
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;
