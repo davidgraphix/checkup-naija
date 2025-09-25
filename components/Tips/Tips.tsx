@@ -31,7 +31,7 @@ const tips = [
 const Tips = () => {
   return (
     <section className="w-full mt-0 pb-4"> 
-      <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 -mt-6 ">
         <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2 text-black ">
           <span className="italic">Simple Tips for a Healthier You</span>
         </h2>
@@ -40,7 +40,7 @@ const Tips = () => {
           {tips.map((tip, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-xl p-2 flex flex-col items-start space-y-2 hover:shadow-lg transition"
+              className="bg-white shadow-xl/30   rounded-xl p-1 flex flex-col items-start space-y-2 hover:shadow-lg transition"
             >
               <span className="text-2xl">{tip.icon}</span>
               <h3 className="font-semibold text-gray-800">{tip.title}</h3>
