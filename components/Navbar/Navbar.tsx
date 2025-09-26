@@ -1,11 +1,11 @@
-"use client"; // needed if you're using Next.js App Router (13+)
+"use client"; 
 
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const pathname = usePathname(); // get current route
+  const pathname = usePathname(); 
 
   const links = [
     { href: "/", label: "HOME" },
@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full flex justify-center pt-6">
-      <div className="bg-white shadow-md rounded-full px-8 py-3 flex items-center justify-between w-[90%] max-w-6xl">
+      <div className="bg-white shadow-md rounded-full px-8 py-2 flex items-center justify-between w-[90%] max-w-6xl">
         <div className="flex items-center space-x-2">
           <span className="text-gray-800 font-semibold text-lg">CheckupNaija</span>
         </div>

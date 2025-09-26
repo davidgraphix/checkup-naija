@@ -2,14 +2,18 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Link from "next/link"
 import Tips from '../Tips/Tips'
+import Image from 'next/image'
+import docImage from '@/public/assets/doctor.png'
 
 const Hero = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-green-600 via-white/60 via-[72%] to-blue-700'>
+   <div className="min-h-screen bg-gradient-to-br from-green-600 via-gray-400/20 via-[65%] to-blue-500
+                bg-[length:250%_250%] animate-[diagonal-flow_10s_linear_infinite] ">
+
         <Navbar />
 
-        <section className=" py-8">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
+        <section className=" pt-4 pb-0">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between -mt-40 px-6 md:px-12">
         
         <div className="text-center md:text-left max-w-xl space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold text-black font-bold leading-tight ">
@@ -23,15 +27,14 @@ const Hero = () => {
             className="inline-block bg-green-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition"
           >
             Get Started
-          </Link>
+          </Link> 
         </div>
 
         
         <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
-          <img
-            src="null"   
+          <Image
+            src={docImage}
             alt="Doctor picture"
-           
             
           />
         </div>
