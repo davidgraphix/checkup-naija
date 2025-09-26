@@ -12,4 +12,29 @@
   }
 }
 
+@keyframes fade-in-float {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  80% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-float {
+  animation: fade-in-float 3.5s ease-in-out infinite;
+}
+
+
 

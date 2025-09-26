@@ -35,6 +35,7 @@ const Hero = () => {
           <Image
             src={docImage}
             alt="Doctor picture"
+            className="animate-fade-in-float"
             
           />
         </div>
