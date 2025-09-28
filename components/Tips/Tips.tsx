@@ -78,7 +78,7 @@ export default function Tips() {
 <div className="hidden lg:block relative">
   <div className="overflow-hidden">
     <div
-      className="flex gap-15 transition-transform duration-500 ease-in-out"
+      className="flex gap-10 transition-transform duration-500 ease-in-out"
       style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
     >
       {[...tips, ...tips.slice(0, 2)].map((tip, i) => (
