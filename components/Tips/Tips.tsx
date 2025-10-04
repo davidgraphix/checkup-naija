@@ -1,23 +1,35 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import appleImage from "@/public/assets/apple.png";
 
 const tips = [
-  { icon: "🍏",
-     title: "Eat Smart, Live Better", 
-     text: "Fill half your plate with fruits & veggies — your body will thank you." },
-  { icon: "💧",
-     title: "Hydrate to Feel Great",
-     text: "Drink 6–8 glasses of water daily to stay energized and refreshed." },
-  { icon: "🚶",
-     title: "Move Every Day",
-     text: "A brisk 30-minute walk boosts your heart health and mood." },
-  { icon: "🌙",
-     title: "Rest is Medicine",
-     text: "Sleep 7–8 hours each night for sharper focus and stronger immunity." },
-  { icon: "✋",
-     title: "Clean Hands, Healthy Life",
-     text: "Wash hands often with soap — 20 seconds can stop infections." },
+  {
+    icon: "🍏",
+    title: "Eat Smart, Live Better",
+    text: "Fill half your plate with fruits & veggies — your body will thank you.",
+  },
+  {
+    icon: "💧",
+    title: "Hydrate to Feel Great",
+    text: "Drink 6–8 glasses of water daily to stay energized and refreshed.",
+  },
+  {
+    icon: "🚶",
+    title: "Move Every Day",
+    text: "A brisk 30-minute walk boosts your heart health and mood.",
+  },
+  {
+    icon: "🌙",
+    title: "Rest is Medicine",
+    text: "Sleep 7–8 hours each night for sharper focus and stronger immunity.",
+  },
+  {
+    icon: "✋",
+    title: "Clean Hands, Healthy Life",
+    text: "Wash hands often with soap — 20 seconds can stop infections.",
+  },
 ];
 
 export default function Tips() {
@@ -26,37 +38,53 @@ export default function Tips() {
   // Auto-slide
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === tips.length - 1 ? 0 : prev + 1
-      );
+      setCurrentIndex((prev) => (prev === tips.length - 1 ? 0 : prev + 1));
     }, 4000);
     return () => clearInterval(interval);
   }, []);
 
-  const nextSlide = () => setCurrentIndex((prev) => (prev === tips.length - 1 ? 0 : prev + 1));
-  const prevSlide = () => setCurrentIndex((prev) => (prev === 0 ? tips.length - 1 : prev - 1));
+  const nextSlide = () =>
+    setCurrentIndex((prev) => (prev === tips.length - 1 ? 0 : prev + 1));
+  const prevSlide = () =>
+    setCurrentIndex((prev) => (prev === 0 ? tips.length - 1 : prev - 1));
 
   return (
     <section className="py-12 lg:py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center -mt-45 lg:mb-12 ">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
-            Simple Tips for a Healthier You
-          </h2>
-        </div>
+<div className="text-center -mt-45 lg:mb-12 flex flex-row items-center justify-center gap-0">
+  <Image
+    src={appleImage}
+    alt="Apple icon"
+    className="w-16 lg:w-20 object-contain"
+  />
+  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 ml-1">
+    Simple Tips for a Healthier You
+  </h2>
+</div>
+
+
 
         {/* Mobile */}
         <div className="lg:hidden">
           <div className="bg-gray-300 rounded-2xl  p-4 fill white shadow-xl">
-            <p className="text-3xl mb-2 text-center">{tips[currentIndex].icon}</p>
-            <h4 className="font-semibold text-gray-900 text-center">{tips[currentIndex].title}</h4>
-            <p className="text-sm text-black text-center">{tips[currentIndex].text}</p>
+            <p className="text-3xl mb-2 text-center">
+              {tips[currentIndex].icon}
+            </p>
+            <h4 className="font-semibold text-gray-900 text-center">
+              {tips[currentIndex].title}
+            </h4>
+            <p className="text-sm text-black text-center">
+              {tips[currentIndex].text}
+            </p>
           </div>
 
           {/* Navigation */}
           <div className="flex justify-center items-center mt-6 space-x-4">
-            <button onClick={prevSlide} className="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition">
+            <button
+              onClick={prevSlide}
+              className="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition"
+            >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
             <div className="flex space-x-2">
@@ -64,36 +92,40 @@ export default function Tips() {
                 <button
                   key={i}
                   onClick={() => setCurrentIndex(i)}
-                  className={`w-2 h-2 rounded-full ${i === currentIndex ? "bg-red-600" : "bg-gray-300"}`}
+                  className={`w-2 h-2 rounded-full ${
+                    i === currentIndex ? "bg-red-600" : "bg-gray-300"
+                  }`}
                 />
               ))}
             </div>
-            <button onClick={nextSlide} className="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition">
+            <button
+              onClick={nextSlide}
+              className="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition"
+            >
               <ChevronRight className="w-5 h-5 text-gray-600" />
             </button>
           </div>
         </div>
 
-       {/* Desktop */}
-<div className="hidden lg:block relative">
-  <div className="overflow-hidden">
-    <div
-      className="flex gap-10 transition-transform duration-500 ease-in-out"
-      style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-    >
-      {[...tips, ...tips.slice(0, 2)].map((tip, i) => (
-        <div
-          key={i}
-          className="bg-gray-300 h-32 rounded-2xl rounded-tl-none p-6 shadow-lg w-64 flex-shrink-0 flex flex-col items-center justify-center text-center"
-        >
-          <p className="text-2xl ">{tip.icon}</p>
-          <h4 className="font-semibold text-gray-900">{tip.title}</h4>
-          <p className="text-sm text-black">{tip.text}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-
+        {/* Desktop */}
+        <div className="hidden lg:block relative">
+          <div className="overflow-hidden">
+            <div
+              className="flex gap-10 transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+            >
+              {[...tips, ...tips.slice(0, 2)].map((tip, i) => (
+                <div
+                  key={i}
+                  className="bg-gray-300 h-32 rounded-2xl rounded-tl-none p-6 shadow-lg w-64 flex-shrink-0 flex flex-col items-center justify-center text-center"
+                >
+                  <p className="text-2xl ">{tip.icon}</p>
+                  <h4 className="font-semibold text-gray-900">{tip.title}</h4>
+                  <p className="text-sm text-black">{tip.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Nav Arrows */}
           <button
@@ -115,7 +147,9 @@ export default function Tips() {
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
-                className={`w-3 h-3 rounded-full ${i === currentIndex ? "bg-green-600" : "bg-gray-300"}`}
+                className={`w-3 h-3 rounded-full ${
+                  i === currentIndex ? "bg-green-600" : "bg-gray-300"
+                }`}
               />
             ))}
           </div>

@@ -12,11 +12,11 @@ const Hero = () => {
 
         <Navbar />
 
-        <section className=" pt-4 pb-0">
+        <section className=" pt-32 pb-0">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between -mt-40 px-6 md:px-12">
         
-        <div className="text-center md:text-left max-w-xl space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-black font-bold leading-tight ">
+        <div className="text-center md:text-left max-w-xl space-y-6 -mb-5 md:mb-0">
+          <h1 className="text-4xl md:text-5xl font-bold text-black font-bold leading-tight mb-4">
             Connecting Patients <br /> to Trusted Healthcare <br /> Providers
           </h1>
           <p className="text-black text-lg">
@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
           <Link
             href="/get-started"
-            className="inline-block bg-green-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition"
+            className="inline-block bg-green-900  text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition"
           >
             Get Started
           </Link> 
