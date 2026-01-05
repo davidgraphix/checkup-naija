@@ -35,7 +35,6 @@ const tips = [
 export default function Tips() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === tips.length - 1 ? 0 : prev + 1));
@@ -49,58 +48,57 @@ export default function Tips() {
     setCurrentIndex((prev) => (prev === 0 ? tips.length - 1 : prev - 1));
 
   return (
-    <section className="py-12 lg:py-16">
-      <div className="container mx-auto px-4">
+    <section className="py-12 lg:py-20">
+      <div className="max-w-6xl mx-auto px-4">
+
         {/* Header */}
-<div className="text-center -mt-45 lg:mb-12 flex flex-row items-center justify-center gap-0">
-  <Image
-    src={appleImage}
-    alt="Apple icon"
-    className="w-16 lg:w-20 object-contain"
-  />
-  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 ml-1">
-    Simple Tips for a Healthier You
-  </h2>
-</div>
-
-
+        <div className="flex items-center justify-center gap-2 mb-8 lg:mb-12">
+          <Image
+            src={appleImage}
+            alt="Apple icon"
+            className="w-14 sm:w-16 lg:w-20 object-contain"
+          />
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 text-center">
+            Simple Tips for a Healthier You
+          </h2>
+        </div>
 
         {/* Mobile */}
         <div className="lg:hidden">
-          <div className="bg-gray-300 rounded-2xl  p-4 fill white shadow-xl">
-            <p className="text-3xl mb-2 text-center">
-              {tips[currentIndex].icon}
-            </p>
-            <h4 className="font-semibold text-gray-900 text-center">
+          <div className="bg-gray-300 rounded-2xl p-6 shadow-xl text-center">
+            <p className="text-3xl mb-3">{tips[currentIndex].icon}</p>
+            <h4 className="font-semibold text-gray-900 mb-2">
               {tips[currentIndex].title}
             </h4>
-            <p className="text-sm text-black text-center">
+            <p className="text-sm text-black leading-relaxed">
               {tips[currentIndex].text}
             </p>
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-center items-center mt-6 space-x-4">
+          <div className="flex justify-center items-center mt-6 gap-4">
             <button
               onClick={prevSlide}
-              className="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition"
+              className="bg-white rounded-full p-2 shadow-md"
             >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
-            <div className="flex space-x-2">
+
+            <div className="flex gap-2">
               {tips.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentIndex(i)}
-                  className={`w-2 h-2 rounded-full ${
-                    i === currentIndex ? "bg-red-600" : "bg-gray-300"
+                  className={`w-2.5 h-2.5 rounded-full ${
+                    i === currentIndex ? "bg-green-600" : "bg-gray-400"
                   }`}
                 />
               ))}
             </div>
+
             <button
               onClick={nextSlide}
-              className="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition"
+              className="bg-white rounded-full p-2 shadow-md"
             >
               <ChevronRight className="w-5 h-5 text-gray-600" />
             </button>
@@ -117,9 +115,9 @@ export default function Tips() {
               {[...tips, ...tips.slice(0, 2)].map((tip, i) => (
                 <div
                   key={i}
-                  className="bg-gray-300 h-32 rounded-2xl rounded-tl-none p-6 shadow-lg w-64 flex-shrink-0 flex flex-col items-center justify-center text-center"
+                  className="bg-gray-300 h-36 rounded-2xl rounded-tl-none p-6 shadow-lg w-64 flex-shrink-0 flex flex-col items-center justify-center text-center"
                 >
-                  <p className="text-2xl ">{tip.icon}</p>
+                  <p className="text-2xl mb-1">{tip.icon}</p>
                   <h4 className="font-semibold text-gray-900">{tip.title}</h4>
                   <p className="text-sm text-black">{tip.text}</p>
                 </div>
@@ -127,22 +125,23 @@ export default function Tips() {
             </div>
           </div>
 
-          {/* Nav Arrows */}
+          {/* Desktop Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600" />
           </button>
+
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg"
           >
             <ChevronRight className="w-6 h-6 text-gray-600" />
           </button>
 
           {/* Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-8 gap-2">
             {[...Array(tips.length - 2)].map((_, i) => (
               <button
                 key={i}
