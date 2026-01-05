@@ -5,30 +5,80 @@ import Image from "next/image";
 import appleImage from "@/public/assets/apple.png";
 
 const tips = [
-  {
+   {
     icon: "🍏",
     title: "Eat Smart, Live Better",
-    text: "Fill half your plate with fruits & veggies — your body will thank you.",
+    text: "Fill half your plate with fruits and vegetables to support digestion and overall health.",
   },
   {
     icon: "💧",
     title: "Hydrate to Feel Great",
-    text: "Drink 6–8 glasses of water daily to stay energized and refreshed.",
+    text: "Drink 6–8 glasses of clean water daily to stay energized and prevent dehydration.",
   },
   {
     icon: "🚶",
     title: "Move Every Day",
-    text: "A brisk 30-minute walk boosts your heart health and mood.",
+    text: "A brisk 30-minute walk daily improves heart health and boosts your mood.",
   },
   {
     icon: "🌙",
     title: "Rest is Medicine",
-    text: "Sleep 7–8 hours each night for sharper focus and stronger immunity.",
+    text: "Aim for 7–8 hours of sleep each night to improve focus and strengthen immunity.",
   },
   {
     icon: "✋",
     title: "Clean Hands, Healthy Life",
-    text: "Wash hands often with soap — 20 seconds can stop infections.",
+    text: "Wash your hands with soap for at least 20 seconds to prevent infections.",
+  },
+  {
+    icon: "🦟",
+    title: "Prevent Malaria",
+    text: "Sleep under insecticide-treated mosquito nets and keep your surroundings clean.",
+  },
+  {
+    icon: "🥗",
+    title: "Balance Your Meals",
+    text: "Include proteins, carbohydrates, healthy fats, and vegetables in your daily meals.",
+  },
+  {
+    icon: "🧂",
+    title: "Reduce Salt Intake",
+    text: "Too much salt can raise blood pressure. Use salt moderately when cooking.",
+  },
+  {
+    icon: "🥤",
+    title: "Limit Sugary Drinks",
+    text: "Reduce soda and sugary drinks to lower your risk of diabetes and weight gain.",
+  },
+  {
+    icon: "🪥",
+    title: "Oral Health Matters",
+    text: "Brush your teeth twice daily and replace your toothbrush every 3 months.",
+  },
+  {
+    icon: "🩺",
+    title: "Check Your Health Regularly",
+    text: "Routine health checkups help detect problems early, even when you feel fine.",
+  },
+  {
+    icon: "☀️",
+    title: "Get Fresh Air and Sunlight",
+    text: "Spend some time outdoors daily to improve mood and support vitamin D levels.",
+  },
+  {
+    icon: "🧠",
+    title: "Protect Your Mental Health",
+    text: "Take breaks, talk to someone you trust, and avoid excessive stress when possible.",
+  },
+  {
+    icon: "🚭",
+    title: "Avoid Smoking",
+    text: "Smoking damages the lungs and heart. Avoid it and stay away from second-hand smoke.",
+  },
+  {
+    icon: "🍺",
+    title: "Limit Alcohol Intake",
+    text: "Excessive alcohol harms the liver and brain. Drink moderately or avoid it entirely.",
   },
 ];
 
