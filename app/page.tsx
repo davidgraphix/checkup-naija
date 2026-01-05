@@ -1,12 +1,13 @@
-import Hero from '@/components/Hero/Hero'
+import Hero from '@/components/Home/Hero'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
+      
       <Hero />
     </div>
   )
 }
 
-export default page
+export default Page
