@@ -131,7 +131,23 @@ const About = () => {
                 </div>
               </div>
 
-             
+              {/* Accessibility */}
+              <div className="flex space-x-6">
+                <div className="flex-shrink-0">
+                  <CheckCircle className="w-8 h-8 text-emerald-500" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Accessibility</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Making quality healthcare available to everyone, regardless of location or economic status.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       
       </main>
 
       {/* Footer */}
