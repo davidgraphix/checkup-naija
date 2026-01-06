@@ -69,6 +69,20 @@ const About = () => {
               </p>
             </div>
 
+            {/* Our Vision */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <Eye className="w-8 h-8 text-emerald-500 flex-shrink-0" />
+                <h2 className="text-4xl font-bold text-gray-900">Our Vision</h2>
+              </div>
+              <p className="text-xl text-gray-700 leading-relaxed max-w-3xl">
+                Our vision is to become Nigeria's leading digital health platform, empowering millions of people to take
+                charge of their health with confidence, convenience, and trust.
+              </p>
+            </div>
+          </div>
+        </section>
+
 
       </main>
 
