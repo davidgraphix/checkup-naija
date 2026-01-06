@@ -54,7 +54,22 @@ const About = () => {
           </div>
         </section>
 
-   
+        {/* Mission & Vision Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            {/* Our Mission */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <Globe className="w-8 h-8 text-emerald-500 flex-shrink-0" />
+                <h2 className="text-4xl font-bold text-gray-900">Our Mission</h2>
+              </div>
+              <p className="text-xl text-gray-700 leading-relaxed max-w-3xl">
+                Our mission is to make healthcare affordable, accessible, and efficient by leveraging technology to
+                bridge the gap between patients and healthcare providers.
+              </p>
+            </div>
+
+
       </main>
 
       {/* Footer */}
