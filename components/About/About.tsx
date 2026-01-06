@@ -8,15 +8,7 @@ const About = () => {
                 bg-[length:250%_250%] animate-[diagonal-flow_10s_linear_infinite]"
     >
       <Navbar />
-    <div className="pt-32">
-        <h1>About us</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde saepe,
-        vel nisi dolor eius et odit esse cumque deleniti in! Nulla possimus
-        pariatur quidem suscipit at, aliquam sunt nisi ratione?
-      </p>
-    </div>
-    </div>
+    
   );
 };
 
