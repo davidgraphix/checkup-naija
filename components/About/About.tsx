@@ -10,7 +10,6 @@ const About = () => {
       className="min-h-screen bg-gradient-to-br from-green-600 via-gray-400/20 via-[65%] to-blue-500
                 bg-[length:250%_250%] animate-[diagonal-flow_10s_linear_infinite]"
     >
-      <Navbar />
       <br /><br /> <br /> <br /><br /> <br />
        {/* Hero Section with Who We Are */}
       <main className="flex-1">
@@ -164,8 +163,7 @@ const About = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <Footer />
+    
     </div>
   );
 };
