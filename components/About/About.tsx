@@ -83,7 +83,55 @@ const About = () => {
           </div>
         </section>
 
+        {/* Core Values Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-12">Our Core Values</h2>
 
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Trust & Transparency */}
+              <div className="flex space-x-6">
+                <div className="flex-shrink-0">
+                  <Heart className="w-8 h-8 text-emerald-500" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Trust & Transparency</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We put patients first and maintain the highest standards of honesty and integrity in every
+                    interaction.
+                  </p>
+                </div>
+              </div>
+
+              {/* Innovation */}
+              <div className="flex space-x-6">
+                <div className="flex-shrink-0">
+                  <Lightbulb className="w-8 h-8 text-emerald-500" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Innovation</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Harnessing technology to create simple, effective solutions that transform healthcare access in
+                    Nigeria.
+                  </p>
+                </div>
+              </div>
+
+              {/* Compassion */}
+              <div className="flex space-x-6">
+                <div className="flex-shrink-0">
+                  <Hands className="w-8 h-8 text-emerald-500" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Compassion</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Delivering quality care that empathizes with the real challenges Nigerians face in accessing
+                    healthcare.
+                  </p>
+                </div>
+              </div>
+
+             
       </main>
 
       {/* Footer */}
