@@ -114,4 +114,16 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+        {/* Divider */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              &copy; 2026 CheckupNaija. All rights reserved. Made with care for Nigeria's health.
+            </p>
+            <p className="text-gray-500 text-xs mt-4 md:mt-0">Providing trusted healthcare solutions across Nigeria</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
