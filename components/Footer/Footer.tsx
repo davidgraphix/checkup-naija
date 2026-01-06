@@ -86,3 +86,32 @@ export function Footer() {
               </li>
             </ul>
           </div>
+          
+          {/* Legal Links */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Legal</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Security
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
