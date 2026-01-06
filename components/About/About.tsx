@@ -33,7 +33,28 @@ const About = () => {
                 </div>
               </div>
 
-        
+              {/* Right Illustration */}
+              <div className="relative">
+                <img
+                  src="/doctor-holding-smartphone.jpg"
+                  alt="Female doctor with smartphone"
+                  className="w-full max-w-md mx-auto"
+                />
+
+                {/* Floating Medical Icons */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="absolute top-20 left-10 w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center animate-float">
+                    <Globe className="w-8 h-8 text-emerald-600" />
+                  </div>
+                  <div className="absolute top-32 right-16 w-12 h-12 bg-teal-100 rounded-full animate-float-delayed"></div>
+                  <div className="absolute bottom-32 left-16 w-10 h-10 bg-green-100 rounded-full animate-bounce"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+   
       </main>
 
       {/* Footer */}
