@@ -11,6 +11,7 @@ const About = () => {
                 bg-[length:250%_250%] animate-[diagonal-flow_10s_linear_infinite]"
     >
       <Navbar />
+      <br /><br /> <br /> <br /><br /> <br />
        {/* Hero Section with Who We Are */}
       <main className="flex-1">
         <section className="bg-gradient-to-r from-emerald-50 via-teal-50 to-green-50 py-20">
