@@ -60,4 +60,29 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          
+                {/* Company Links */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Company</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Support
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
