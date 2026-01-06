@@ -33,3 +33,31 @@ export function Footer() {
               </a>
             </div>
           </div>
+
+           {/* Platform Links */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Platform</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Find Doctors
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm">
+                  Book Appointment
+                </a>
+              </li>
+            </ul>
+          </div>
+          
