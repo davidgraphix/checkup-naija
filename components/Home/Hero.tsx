@@ -1,5 +1,5 @@
+"use client";
 import React from "react";
-import Navbar from "../Navbar/Navbar";
 import Link from "next/link";
 import Tips from "../Tips/Tips";
 import Image from "next/image";

@@ -98,7 +98,7 @@ export default function Tips() {
     setCurrentIndex((prev) => (prev === 0 ? tips.length - 1 : prev - 1));
 
   return (
-    <section className="py-12 lg:py-20">
+    <section className="py-12 lg:py-20 ">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Header */}
