@@ -1,4 +1,5 @@
 import Hero from '@/components/Home/Hero'
+import Navbar from '@/components/Navbar/Navbar'
 import React from 'react'
 
 const Page = () => {
@@ -6,6 +7,8 @@ const Page = () => {
     <div>
       
       <Hero />
+      <Navbar />
+
     </div>
   )
 }
