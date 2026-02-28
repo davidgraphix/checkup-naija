@@ -98,9 +98,11 @@ const Services = () => {
           <p className="text-2xl text-black max-w-4xl mx-auto fw500 mb-6">
             Quality Healthcare. Simplified for Nigerians.
           </p>
-          <p className="text-lg text-black max-w-2xl mx-auto"> We connect you to
-            reliable medical support, verified professionals, and essential
-            health services — all in one place.</p>
+          <p className="text-lg text-black max-w-2xl mx-auto">
+            {" "}
+            We connect you to reliable medical support, verified professionals,
+            and essential health services — all in one place.
+          </p>
         </div>
 
         {/* Service Cards */}
@@ -153,31 +155,65 @@ const Services = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold text-black mb-6">
-            Why Choose CheckupNaija?
-          </h3>
+        <div className="mt-28">
+          <div className="text-center mb-14">
+            <h3 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Why Choose CheckupNaija?
+            </h3>
+            <p className="text-lg text-black/80 max-w-2xl mx-auto">
+              We combine technology, trust, and simplicity to deliver a
+              healthcare experience built specifically for Nigerians.
+            </p>
+          </div>
 
-          <div className="flex flex-wrap justify-center gap-8 text-black font-medium">
-            <span className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald-600" />
-              Trusted & Verified Providers
-            </span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300">
+              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Trusted & Verified Providers
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Every hospital and doctor on our platform is carefully verified
+                to ensure safety, credibility, and professional standards.
+              </p>
+            </div>
 
-            <span className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald-600" />
-              Easy Booking System
-            </span>
+            {/* Card 2 */}
+            <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300">
+              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Seamless Booking System
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Schedule appointments in minutes with an intuitive interface
+                designed for speed, clarity, and convenience.
+              </p>
+            </div>
 
-            <span className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald-600" />
-              Affordable & Transparent
-            </span>
+            {/* Card 3 */}
+            <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300">
+              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Affordable & Transparent
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                No hidden charges. Clear pricing and accessible services that
+                make quality healthcare financially realistic.
+              </p>
+            </div>
 
-            <span className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-emerald-600" />
-              Designed for Nigerians
-            </span>
+            {/* Card 4 */}
+            <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300">
+              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Built for Nigerians
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Designed around local healthcare realities, infrastructure, and
+                the real needs of patients across Nigeria.
+              </p>
+            </div>
           </div>
         </div>
       </div>
