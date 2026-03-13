@@ -98,11 +98,11 @@ export default function Tips() {
     setCurrentIndex((prev) => (prev === 0 ? tips.length - 1 : prev - 1));
 
   return (
-    <section className="py-12 lg:py-20 ">
+    <section className="-mt-10 xl:-mt-35  ">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Header */}
-        <div className="flex items-center justify-center gap-2 mb-8 lg:mb-12">
+        <div className="flex items-center justify-center gap-2 mb-8 lg:mb-3">
           <Image
             src={appleImage}
             alt="Apple icon"
