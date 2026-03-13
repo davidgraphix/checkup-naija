@@ -10,6 +10,7 @@ import {
   BookOpen,
   CheckCircle,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -178,111 +179,186 @@ const Services = () => {
 </div>
 
         {/* How the Platform Works */}
-        <div className="mt-32">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-black mb-4">
-              How CheckupNaija Works
-            </h3>
+       <div className="mt-20">
+  <div className="text-center mb-10">
+    <h3 className="text-4xl font-bold text-black mb-4">
+      How CheckupNaija Works
+    </h3>
 
-            <p className="text-lg text-black/80 max-w-2xl mx-auto">
-              Our platform makes accessing healthcare simple and efficient.
-            </p>
-          </div>
+    <p className="text-lg text-black/80 max-w-2xl mx-auto">
+      Our platform makes accessing healthcare simple and efficient.
+    </p>
+  </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white/90 rounded-2xl p-8 shadow-lg">
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                1. Search Healthcare Providers
-              </h4>
-              <p className="text-gray-600">
-                Discover verified hospitals, clinics, and licensed doctors
-                across Nigeria using intelligent search filters.
-              </p>
-            </div>
+  <div className="grid md:grid-cols-3 gap-10">
 
-            <div className="bg-white/90 rounded-2xl p-8 shadow-lg">
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                2. Book or Consult Instantly
-              </h4>
-              <p className="text-gray-600">
-                Schedule appointments, request medical tests, or consult doctors
-                through secure digital consultations.
-              </p>
-            </div>
+    {/* LEFT CARD */}
+    <motion.div
+      initial={{ x: -80, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="bg-white/90 rounded-2xl p-8 shadow-lg"
+    >
+      <h4 className="text-xl font-bold text-gray-900 mb-3">
+        1. Search Healthcare Providers
+      </h4>
+      <p className="text-gray-600">
+        Discover verified hospitals, clinics, and licensed doctors
+        across Nigeria using intelligent search filters.
+      </p>
+    </motion.div>
 
-            <div className="bg-white/90 rounded-2xl p-8 shadow-lg">
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                3. Manage Your Health
-              </h4>
-              <p className="text-gray-600">
-                Monitor your health records, receive reminders, and access
-                trusted health resources in one place.
-              </p>
-            </div>
-          </div>
-        </div>
+    {/* MIDDLE CARD */}
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+      className="bg-white/90 rounded-2xl p-8 shadow-lg"
+    >
+      <h4 className="text-xl font-bold text-gray-900 mb-3">
+        2. Book or Consult Instantly
+      </h4>
+      <p className="text-gray-600">
+        Schedule appointments, request medical tests, or consult doctors
+        through secure digital consultations.
+      </p>
+    </motion.div>
+
+    {/* RIGHT CARD */}
+    <motion.div
+      initial={{ x: 80, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+      className="bg-white/90 rounded-2xl p-8 shadow-lg"
+    >
+      <h4 className="text-xl font-bold text-gray-900 mb-3">
+        3. Manage Your Health
+      </h4>
+      <p className="text-gray-600">
+        Monitor your health records, receive reminders, and access
+        trusted health resources in one place.
+      </p>
+    </motion.div>
+
+  </div>
+</div>
 
 
 
         {/* Why Choose Us */}
-        <div className="mt-28">
-          <div className="text-center mb-14">
-            <h3 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Why Choose CheckupNaija?
-            </h3>
+       <div className="mt-20">
+  <div className="text-center mb-14">
+    <h3 className="text-4xl md:text-5xl font-bold text-black mb-4">
+      Why Choose CheckupNaija?
+    </h3>
 
-            <p className="text-lg text-black/80 max-w-2xl mx-auto">
-              We combine technology, trust, and simplicity to deliver a
-              healthcare experience designed specifically for Nigerians.
-            </p>
-          </div>
+    <p className="text-lg text-black/80 max-w-2xl mx-auto">
+      We combine technology, trust, and simplicity to deliver a
+      healthcare experience designed specifically for Nigerians.
+    </p>
+  </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <div className="bg-white/90 rounded-2xl p-8 shadow-lg">
-              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                Trusted & Verified Providers
-              </h4>
-              <p className="text-gray-600">
-                Every doctor and hospital is carefully verified to ensure
-                safety and credibility.
-              </p>
-            </div>
+    {/* Card 1 */}
+    <motion.div
+     initial={{ y: -80, opacity: 0, scale: 0.9 }}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 80,
+        damping: 12,
+        duration: 0.2,
+        delay: 0.4,
+      }}
+      viewport={{ once: false, amount: 0.3 }}
+      className="bg-white/90 rounded-2xl p-8 shadow-lg"
+    >
+      <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+      <h4 className="text-xl font-bold text-gray-900 mb-3">
+        Trusted & Verified Providers
+      </h4>
+      <p className="text-gray-600">
+        Every doctor and hospital is carefully verified to ensure
+        safety and credibility.
+      </p>
+    </motion.div>
 
-            <div className="bg-white/90 rounded-2xl p-8 shadow-lg">
-              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                Seamless Booking
-              </h4>
-              <p className="text-gray-600">
-                Easily schedule appointments without long queues or delays.
-              </p>
-            </div>
+    {/* Card 2 */}
+    <motion.div
+       initial={{ y: -80, opacity: 0, scale: 0.9 }}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 80,
+        damping: 12,
+        duration: 0.4,
+        delay: 0.6,
+      }}
+      viewport={{ once: false, amount: 0.3 }}
+      className="bg-white/90 rounded-2xl p-8 shadow-lg"
+    >
+      <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+      <h4 className="text-xl font-bold text-gray-900 mb-3">
+        Seamless Booking
+      </h4>
+      <p className="text-gray-600">
+        Easily schedule appointments without long queues or delays.
+      </p>
+    </motion.div>
 
-            <div className="bg-white/90 rounded-2xl p-8 shadow-lg">
-              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                Affordable Healthcare
-              </h4>
-              <p className="text-gray-600">
-                Transparent services designed to make quality healthcare
-                financially accessible.
-              </p>
-            </div>
+    {/* Card 3 */}
+    <motion.div
+      initial={{ y: -80, opacity: 0, scale: 0.9 }}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 80,
+        damping: 12,
+        duration: 0.6,
+        delay: 0.8,
+      }}
+      viewport={{ once: false, amount: 0.3 }}
+      className="bg-white/90 rounded-2xl p-8 shadow-lg"
+    >
+      <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+      <h4 className="text-xl font-bold text-gray-900 mb-3">
+        Affordable Healthcare
+      </h4>
+      <p className="text-gray-600">
+        Transparent services designed to make quality healthcare
+        financially accessible.
+      </p>
+    </motion.div>
 
-            <div className="bg-white/90 rounded-2xl p-8 shadow-lg">
-              <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                Built for Nigerians
-              </h4>
-              <p className="text-gray-600">
-                Designed around the realities of healthcare access in Nigeria.
-              </p>
-            </div>
+    {/* Card 4 */}
+    <motion.div
+      initial={{ y: -80, opacity: 0, scale: 0.9 }}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 80,
+        damping: 12,
+        duration: 0.8,
+        delay: 1,
+      }}
+      viewport={{ once: false, amount: 0.3 }}
+      className="bg-white/90 rounded-2xl p-8 shadow-lg"
+    >
+      <CheckCircle className="w-10 h-10 text-emerald-600 mb-6" />
+      <h4 className="text-xl font-bold text-gray-900 mb-3">
+        Built for Nigerians
+      </h4>
+      <p className="text-gray-600">
+        Designed around the realities of healthcare access in Nigeria.
+      </p>
+    </motion.div>
 
-          </div>
-        </div>
+  </div>
+</div>
 
         {/* Final CTA */}
         <div className="mt-32 text-center bg-emerald-600 rounded-2xl p-16">
