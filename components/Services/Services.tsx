@@ -41,7 +41,7 @@ const services = [
     link: "/clinics",
   },
   {
-    title: "Online Doctor Consultation",
+    title: "Doctor Consultation",
     description:
       "Speak with licensed doctors remotely through secure video consultations and digital care services.",
     icon: Video,
@@ -111,43 +111,42 @@ const Services = () => {
 
     
 
- {/* Service Cards */}
 {/* Service Cards */}
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
   {services.map((service, index) => {
     const Icon = service.icon;
 
     return (
       <div
         key={index}
-        className="bg-white rounded-2xl p-10 shadow-lg border border-gray-100
+        className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100
         hover:shadow-2xl hover:-translate-y-1 transition-all duration-300
         flex flex-col"
       >
         {/* Icon */}
-        <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-          <Icon className="w-8 h-8 text-emerald-600" />
+        <div className="w-18 h-18 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 ml-27">
+          <Icon className="w-10 h-10 text-emerald-600" />
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+        <h3 className="text-2xl font-bold text-gray-900 mb-2  flex items-center justify-center">
           {service.title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <p className="text-gray-700 leading-relaxed mb-3">
           {service.description}
         </p>
 
         {/* Key Features */}
         <div className="mb-8">
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
             What you get
           </p>
 
-          <ul className="space-y-3">
+          <ul className="space-y-3 -mb-6">
             {service.features.map((feature, i) => (
-              <li key={i} className="flex items-start text-gray-700">
+              <li key={i} className="flex items-start text-gray-700 ">
                 <CheckCircle className="w-5 h-5 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" />
                 <span>{feature}</span>
               </li>
@@ -156,11 +155,10 @@ const Services = () => {
         </div>
 
         {/* Extra Info Section */}
-        <div className="bg-gray-50 rounded-xl p-4 mb-8">
+        <div className="bg-gray-50 rounded-xl p-4 mb-3">
           <p className="text-sm text-gray-600 leading-relaxed">
             Designed to make healthcare access easier and faster across
-            Nigeria. Our system connects you with trusted providers and
-            simplifies the entire medical booking process.
+            Nigeria. 
           </p>
         </div>
 
