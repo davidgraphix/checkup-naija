@@ -11,11 +11,9 @@ const Hero = () => {
       className="min-h-screen bg-gradient-to-br from-green-600 via-gray-400/20 via-[65%] to-blue-500
                  bg-[length:250%_250%] animate-[diagonal-flow_10s_linear_infinite]"
     >
-
       {/* Hero Section */}
-      <section className="pt-28 md:pt-15 pb-16">
+      <section className="pt-25 md:pt-30 pb-2 xl:pt-0">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12 gap-12">
-          
           {/* Text */}
           <div className="text-center md:text-left max-w-xl space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
